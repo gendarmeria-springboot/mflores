@@ -25,18 +25,15 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 	
 	@Override
-	public PersonaDTO read(Integer id) {
-		Optional<PersonaEntity> personaEntity = this.personaRepository.findById(id);
-		if (!personaEntity.isPresent()) {
-			return null;
-		}
-		PersonaDTO response = Factory.getPersonaDTO(personaEntity.get());
-		return response;
-	}
-
+    public PersonaDTO read(int id) {
+        Optional<PersonaEntity> personaEntity = this.personaRepository.findById(id);  
+       
+        return  Factory.getPersonaDTO(personaEntity.get());
+    }
+		
 	@Override
 	public Boolean update(PersonaDTO body) {
-		PersonaEntity entity = null;
+		PersonaEntity entity = Factory.getPersonaEntity(body);
 		PersonaEntity personaEntity = this.personaRepository.save(entity);
 		if (personaEntity == null) {
 			return false;
@@ -45,7 +42,7 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 
 	@Override
-	public Boolean delete(Integer id) {
+	public Boolean delete(int id) {
 		this.personaRepository.deleteById(id);
 		return true;
 	}

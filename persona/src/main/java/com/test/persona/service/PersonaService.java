@@ -5,11 +5,11 @@ import com.test.persona.dto.PersonaDTO;
 public interface PersonaService {
 	PersonaDTO create(PersonaDTO body);
 
-	PersonaDTO read(Integer id);
+	PersonaDTO read(int id);
 
 	Boolean update(PersonaDTO body);
 
-	Boolean delete(Integer id);
+	Boolean delete(int id);
 
 }
 
