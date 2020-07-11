@@ -62,7 +62,7 @@ public class PersonaController {
         }
         return new ResponseEntity<String>("{status:\"SUCCESS\"}", HttpStatus.OK);
             
-    }
+    } 
 	
 	/*@GetMapping(value="/lista", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<InmateDTO>> read() {
