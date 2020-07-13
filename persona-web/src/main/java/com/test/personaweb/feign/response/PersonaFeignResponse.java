@@ -13,4 +13,3 @@ public class PersonaFeignResponse {
 	private String nombres;
 	private String apellidos;
 }
-
