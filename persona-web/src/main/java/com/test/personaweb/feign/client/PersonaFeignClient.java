@@ -11,7 +11,8 @@ import com.test.personaweb.feign.response.PersonaFeignResponse;
 
 @FeignClient(name = "persona")
 public interface PersonaFeignClient {
-	@PostMapping(value = "/crea", produces = MediaType.APPLICATION_JSON_VALUE)	
+	//@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)	
+	@PostMapping(value = "/persona", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<PersonaFeignResponse> crea(@RequestBody PersonaFeignRequest body);
 
 	

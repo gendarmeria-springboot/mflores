@@ -20,7 +20,8 @@ public class PersonaController {
 	@Autowired
 	private PersonaService personaService;
 
-	@PostMapping(value = "/crea", produces = MediaType.APPLICATION_JSON_VALUE)
+	//@PostMapping(value = "/crea", produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<PersonaDTO> crea(@RequestBody PersonaDTO body){ //throws ChallengeWebException {
 		PersonaDTO persona = this.personaService.crea(body);
 		return ResponseEntity.ok(persona);

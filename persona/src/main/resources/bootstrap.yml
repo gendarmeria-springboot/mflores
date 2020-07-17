@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: "dev"
+  application:
+    name: persona
+  cloud:
+    config:
+      uri: "http://localhost:9999"
+

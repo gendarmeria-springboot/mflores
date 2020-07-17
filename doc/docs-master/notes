@@ -1,0 +1,49 @@
+gendarmeria.springboot@gmail.com
+casa.2020!$$
+
+
+mysql://mysql:54.233.182.234:3306/auth
+auth
+auth.2020
+
+
+mysql://mysql:54.233.182.234:3306/inmates
+inmate
+inmate.2020
+
+
+mysql://mysql:54.233.182.234:3306/inmates
+admin
+admin.2020
+190.196.53.25
+
+--------------------------
+spring:
+  application:
+    name: master-class03
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+--------------------------------------------------------
+git clone <url del repositorio>
+git checkout master
+git pull
+git checkout -b feature/<username>
+----- luego de terminar el código de la jornada ---
+git add .
+git commit -m "<message>"
+git push --set-upstream origin feature/<username>
+
+-------------------
+ORACLE JDBC
+mvn install:install-file -Dfile=ojdbc6.jar -DgroupId=com.oracle.jdbc -DartifactId=ojdbc6 -Dversion=11.1.0.6.0 -Dpackaging=jar
+
+-----------------
+NgSpinner.
+https://www.npmjs.com/package/ngx-spinner
+
+-----------------
+Sweet alert
+https://www.npmjs.com/package/sweetalert2

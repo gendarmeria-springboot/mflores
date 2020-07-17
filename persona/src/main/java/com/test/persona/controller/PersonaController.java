@@ -26,7 +26,8 @@ public class PersonaController {
 	@Autowired
 	private PersonaService personaService;
 	
-	@PostMapping(value="/crea",produces = MediaType.APPLICATION_JSON_VALUE)
+	//@PostMapping(value="/crea",produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<PersonaDTO> create(@RequestBody PersonaDTO body) {
         PersonaDTO response = this.personaService.create(body);
         return new ResponseEntity<PersonaDTO>(response, HttpStatus.CREATED);

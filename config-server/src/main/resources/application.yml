@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/gendarmeria-springboot/cloud-config-server-repo.git
+          fail-fast: true
+          username: "gendarmeria.springboot@gmail.com"
+          password: "casa.2020!$$"
+server:
+  port: 9999
