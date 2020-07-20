@@ -2,7 +2,7 @@ spring:
   profiles:
     active: "dev"
   application:
-    name: persona
+    name: persona-web
   cloud:
     config:
       uri: "http://localhost:9999"
